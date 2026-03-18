@@ -11,12 +11,12 @@ npm run dev
 
 ## Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
 | `npm run preview` | Preview production build |
-| `npm run clean` | Remove build output |
+| `npm run clean`   | Remove build output      |
 
 ## Project Structure
 
@@ -76,6 +76,6 @@ This template is intentionally minimal. Add tools per project as needed:
 - Use the `@` alias to import from `src/`
 
 ```js
-import '@/css/main.css';
-import { myModule } from '@/js/modules/myModule.js';
+import "@/css/main.css";
+import { myModule } from "@/js/modules/myModule.js";
 ```
