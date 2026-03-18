@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="base-style.css" />
 		<link rel="stylesheet" href="style.css" />
 		<script src="https://kit.fontawesome.com/d64aec1fdb.js" crossorigin="anonymous"></script>
+		<script src="main.js" defer></script>
 	</head>
 	<body>
 		<header class=""></header>
@@ -18,16 +19,38 @@
 				<h1 class="header">South Africa Client and Partner Summit</h1>
 				<p class="header-text">March 25, 2026 <br />The Vineyard, Cape Town</p>
 				<div class="button-wrapper">
-					<div class="wifi-btn">
-						<div class="icon"><i class="fa-sharp fa-wifi"></i></div>
-						<div class="text"><span class="wifi-text">Wi-Fi Name:</span>VINEYARD#CONNECT</div>
-					</div>
+					<button type="button" class="primary-btn-white event-btn" id="wifiBtn">
+						Wi-Fi <i class="fa-sharp fa-wifi"></i>
+					</button>
 					<a
 						href="https://www.surveymonkey.com/r/SAClientSummit2026"
 						target="_blank"
 						class="primary-btn-white event-btn">
 						Feedback Survey <i class="fa-sharp fa-arrow-up-right-from-square"></i>
 					</a>
+				</div>
+
+				<div
+					class="modal-content"
+					id="wifiModal"
+					role="dialog"
+					aria-modal="true"
+					aria-labelledby="wifiModalTitle">
+					<div class="speaker-modal wifi">
+						<div class="close-modal" id="wifiModalClose" aria-label="Close Wi-Fi modal">
+							&times;
+						</div>
+						<div class="wifi-modal">
+							<div class="network">
+								<p id="wifiModalTitle"><strong>Wi-Fi Name:</strong></p>
+								<p>CONFERENCE</p>
+							</div>
+							<div class="password">
+								<p><strong>Wi-Fi Password:</strong></p>
+								<p>VINEYARD#CONNECT</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -91,8 +114,9 @@
 							<p>4:00 PM &ndash; 4:30 PM</p>
 						</div>
 						<div class="session">
-							<p class="title"><strong>Style Analytics</strong></p>
-							<p class="speaker">Product Strategy and Fixed Income Analytics Update</p>
+							<p class="title">
+								<strong>Style Analytics Product Strategy and Fixed Income Analytics Update</strong>
+							</p>
 							<p class="speaker">Chris Smith-Hill, Head of Product, Style Analytics</p>
 						</div>
 					</div>
@@ -105,8 +129,7 @@
 						</div>
 						<div class="session">
 							<p class="title"><strong>Services Update</strong></p>
-							<p class="speaker">Rene Draude,</p>
-							<p class="speaker">Senior Vice President, Client Experience</p>
+							<p class="speaker">Rene Draude, Senior Vice President, Client Experience</p>
 						</div>
 					</div>
 

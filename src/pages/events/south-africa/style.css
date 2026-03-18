@@ -757,7 +757,7 @@ button.tablinks {
 }
 
 .event-btn {
-	padding: 0 2.25em 0 1.5em !important;
+	padding: 0 1.5rem !important;
 	min-height: 3rem;
 	display: inline-flex;
 	align-items: center;
