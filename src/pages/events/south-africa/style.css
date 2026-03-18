@@ -1,159 +1,7 @@
 :root {
 	--ohio-dark: #00263f;
 	--ohio-blue: #003968;
-}
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-@font-face {
-	font-family: "Gilroy";
-	src:
-		url("../../../assets/fonts/gilroy-light-webfont.woff2") format("woff2"),
-		url("../../../assets/fonts/gilroy-light-webfont.woff") format("woff"),
-		url("../../../assets/fonts/gilroy-light.otf") format("opentype");
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-	/* unicode-range: U+0020-007F; */
-}
-
-@font-face {
-	font-family: "Gilroy";
-	src:
-		url("../../../assets/fonts/gilroy-lightitalic-webfont.woff2") format("woff2"),
-		url("../../../assets/fonts/gilroy-lightitalic-webfont.woff") format("woff"),
-		url("../../../assets/fonts/gilroy-lightitalic.otf") format("opentype");
-	font-weight: 300;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Gilroy";
-	src:
-		url("../../../assets/fonts/gilroy-regular-webfont.woff2") format("woff2"),
-		url("../../../assets/fonts/gilroy-regular-webfont.woff") format("woff"),
-		url("../../../assets/fonts/gilroy-regular.otf") format("opentype");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Gilroy";
-	src:
-		url("../../../assets/fonts/gilroy-regularitalic-webfont.woff2") format("woff2"),
-		url("../../../assets/fonts/gilroy-regularitalic-webfont.woff") format("woff"),
-		url("../../../assets/fonts/gilroy-regularitalic.otf") format("opentype");
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Gilroy";
-	src:
-		url("../../../assets/fonts/gilroy-medium-webfont.woff2") format("woff2"),
-		url("../../../assets/fonts/gilroy-medium-webfont.woff") format("woff"),
-		url("../../../assets/fonts/gilroy-medium.otf") format("opentype");
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Gilroy";
-	src:
-		url("../../../assets/fonts/gilroy-mediumitalic-webfont.woff2") format("woff2"),
-		url("../../../assets/fonts/gilroy-mediumitalic-webfont.woff") format("woff"),
-		url("../../../assets/fonts/gilroy-mediumitalic.otf") format("opentype");
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Gilroy";
-	src:
-		url("../../../assets/fonts/gilroy-bold-webfont.woff2") format("woff2"),
-		url("../../../assets/fonts/gilroy-bold-webfont.woff") format("woff"),
-		url("../../../assets/fonts/gilroy-bold.otf") format("opentype");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Gilroy";
-	src:
-		url("../../../assets/fonts/gilroy-bolditalic-webfont.woff2") format("woff2"),
-		url("../../../assets/fonts/gilroy-bolditalic-webfont.woff") format("woff"),
-		url("../../../assets/fonts/gilroy-bolditalic.otf") format("opentype");
-	font-weight: 700;
-	font-style: italic;
-	font-display: swap;
-}
-
-body {
-	font-family: "Gilroy", system-ui, sans-serif;
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-.content-grid,
-.full-width {
-	--padding-inline: 2rem;
-	--content-max-width: 1200px;
-
-	display: grid;
-	grid-template-columns:
-		[full-width-start]
-		minmax(var(--padding-inline), 1fr)
-		[content-start] min(100% - (var(--padding-inline) * 2), var(--content-max-width))
-		[content-end]
-		minmax(var(--padding-inline), 1fr)
-		[full-width-end];
-}
-
-.content-grid > :not(.full-width),
-.full-width > :not(.full-width),
-.full-width > :not(.bg-img) {
-	grid-column: content;
-}
-
-.content-grid > .full-width,
-.content-grid > .full-width > .bg-img {
-	grid-column: full-width;
-}
-
-header {
-	background-color: var(--ohio-dark);
-	height: 4rem;
+	--conf-green: #55941c;
 }
 
 /* WordPress Page CSS */
@@ -189,7 +37,6 @@ p.header-text {
 .prehead {
 	font-size: 2rem;
 	text-transform: uppercase;
-	font-family: "Gilroy", "gilroy-light";
 	font-weight: medium;
 	background: white;
 	-webkit-background-clip: text;
@@ -224,7 +71,7 @@ h1.header {
 	transition: box-shadow 300ms;
 	font-size: 1.125rem;
 	line-height: 150%;
-	font-family: "gilroy-bold";
+
 	color: var(--ohio-dark) !important;
 	cursor: pointer;
 }
@@ -260,7 +107,7 @@ h1.header {
 	background: var(--light-gradient);
 	padding: 1rem 2rem calc(1rem - 4px) 1.5rem;
 	border-bottom: #55941c solid 4px;
-	font-family: "gilroy-bold";
+
 	font-size: 1.5rem;
 	color: #fff;
 }
@@ -294,7 +141,7 @@ h1.header {
 
 .time p {
 	margin: 0;
-	font-family: "gilroy-bold", sans-serif !important;
+
 	font-weight: bold;
 	font-size: 1rem;
 }
@@ -305,13 +152,12 @@ h1.header {
 	text-wrap: balance;
 	color: var(--ohio-dark);
 	margin: 0;
-	font-family: "Gilroy", "gilroy-light", sans-serif !important;
+
 	font-weight: light;
 }
 
 strong {
 	font-weight: 700;
-	font-family: "Gilroy-bold" !important;
 }
 
 .speaker {
@@ -387,7 +233,6 @@ strong {
 .breakout-session p {
 	padding: 0;
 	margin: 0;
-	font-family: "Gilroy-bold" !important;
 }
 
 .session-wrapper {
@@ -404,7 +249,6 @@ strong {
 	font-weight: 700;
 	font-size: 1.5rem;
 	text-align: left;
-	font-family: "Gilroy-light" !important;
 }
 
 @media (max-width: 980px) {
@@ -472,7 +316,7 @@ strong {
 .speaker-wrapper .name {
 	font-size: 1.5rem;
 	font-weight: 700;
-	font-family: "Gilroy-bold" !important;
+
 	margin: 0;
 	padding: 0;
 	margin-bottom: 0.25rem;
@@ -492,7 +336,6 @@ strong {
 	text-wrap: balance;
 	color: #24629b !important;
 	margin: 0;
-	font-family: "Gilroy-bold", sans-serif !important;
 }
 
 .speaker-wrapper .speaker {
@@ -536,7 +379,7 @@ strong {
 .speaker-modal-text .name {
 	font-size: 1.5rem;
 	font-weight: 700;
-	font-family: "Gilroy-bold" !important;
+
 	margin: 0;
 	padding: 0;
 	margin-bottom: 0.5rem;
@@ -638,7 +481,7 @@ strong {
 	flex-wrap: wrap;
 	font-size: 1.5rem;
 	line-height: 150%;
-	font-family: "gilroy-bold";
+
 	color: #00263f;
 }
 
@@ -665,7 +508,7 @@ strong {
 
 .wifi-modal {
 	font-size: 1.125rem;
-	font-family: "gilroy-bold";
+
 	display: flex;
 	justify-content: center;
 	align-items: start;
@@ -677,12 +520,10 @@ strong {
 	padding: 0;
 	text-wrap: nowrap;
 	color: var(--ohio-dark) !important;
-	font-family: "gilroy-bold" !important;
 }
 
 .wifi-modal span {
 	font-size: 0.875rem;
-	font-family: "gilroy-light";
 }
 
 #wifiPassword {
@@ -779,7 +620,7 @@ button.tablinks {
 	line-height: 1.5;
 	background-color: var(--ohio-blue);
 	color: white;
-	font-family: "gilroy-bold";
+
 	border: none;
 	cursor: pointer !important;
 }
@@ -849,7 +690,7 @@ button.tablinks {
 .company {
 	font-size: 1rem !important;
 	color: #00263f !important;
-	font-family: "Gilroy", "gilroy-light", sans-serif !important;
+
 	font-weight: bold !important;
 }
 
@@ -885,7 +726,7 @@ button.tablinks {
 .panel .names-wrapper .name {
 	font-size: 1rem !important;
 	color: #00263f !important;
-	font-family: "Gilroy", "gilroy-light", sans-serif !important;
+
 	font-weight: bold !important;
 }
 
@@ -913,5 +754,66 @@ button.tablinks {
 .panel-header {
 	font-size: 1rem !important;
 	color: #003968 !important;
-	font-family: "Gilroy-bold", "gilroy-light", sans-serif !important;
+}
+
+.event-btn {
+	padding: 0 2.25em 0 1.5em !important;
+	min-height: 3rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: start;
+	gap: 1rem;
+	width: auto;
+	font-weight: 600;
+	cursor: pointer;
+	border: none;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	background: linear-gradient(-30deg, rgba(255, 255, 255, 0) 5%, #ffffff 5%) !important;
+}
+
+.wifi-btn {
+	min-height: 3rem;
+	display: inline-flex;
+	justify-content: start;
+	align-items: center;
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 1;
+	background: white;
+}
+
+.wifi-btn .icon {
+	min-height: 3rem;
+	background: var(--conf-green);
+	color: white;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	aspect-ratio: 1;
+}
+
+.wifi-btn .text {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	padding: 0 1rem;
+}
+
+.wifi-btn span.wifi-text {
+	color: var(--conf-green);
+	font-size: 0.875rem;
+	font-weight: 800;
+	line-height: 1 !important;
+}
+
+.button-wrapper {
+	display: flex;
+	gap: 1rem;
+	margin-top: 2rem;
+	height: auto;
+	align-items: center;
+	flex-wrap: wrap;
 }
