@@ -1,3 +1,17 @@
+:root {
+	--bg:
+		linear-gradient(to top, #fff 0, transparent 50%),
+		radial-gradient(
+			ellipse 146.99% 62% at calc((100% - min(100%, 1264px)) / 2) 50vh,
+			#fff 0,
+			var(--ui, #d0d4e3) 100%
+		),
+		#fff;
+	--text: rgb(0 38 63);
+	--ohio-dark: rgb(0, 38, 63);
+	--ohio-blue: rgb(0, 57, 104);
+}
+
 *,
 *::before,
 *::after {
@@ -102,8 +116,8 @@ body {
 	font-family: "Gilroy", system-ui, sans-serif;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
-	background-color: #1e1e1e;
-	color: white;
+	background-color: var(--bg);
+	color: var(--text);
 }
 
 img,
@@ -157,7 +171,7 @@ select {
 .page-link {
 	display: inline-block;
 	padding: 0.5rem 1rem;
-	background-color: #2a2a2a;
+	background-color: var(--ohio-blue);
 	color: white;
 	text-decoration: none;
 	border-radius: 0.25rem;
@@ -165,5 +179,5 @@ select {
 }
 
 .page-link:hover {
-	background-color: #3a3a3a;
+	background-color: var(--ohio-dark);
 }
