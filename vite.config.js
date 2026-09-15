@@ -17,7 +17,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: resolve(__dirname, "index.html"),
-				page: resolve(__dirname, "src/pages/Progress Bar/progress-bar.html"),
+				page: resolve(__dirname, "src/pages/progress-bar/progress-bar.html"),
 			},
 		},
 	},
